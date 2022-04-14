@@ -15,7 +15,6 @@
 		2634227D2800413500FB6D9D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2634227B2800413500FB6D9D /* LaunchScreen.storyboard */; };
 		263422872800612600FB6D9D /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 263422862800612600FB6D9D /* NetworkService.swift */; };
 		263422892800617800FB6D9D /* Currency.swift in Sources */ = {isa = PBXBuildFile; fileRef = 263422882800617800FB6D9D /* Currency.swift */; };
-		263422AB28022A8700FB6D9D /* NetworkDataFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 263422AA28022A8700FB6D9D /* NetworkDataFetcher.swift */; };
 		263422AD2802438B00FB6D9D /* CurrencyCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 263422AC2802438B00FB6D9D /* CurrencyCell.swift */; };
 /* End PBXBuildFile section */
 
@@ -30,7 +29,6 @@
 		2634227E2800413500FB6D9D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		263422862800612600FB6D9D /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 		263422882800617800FB6D9D /* Currency.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Currency.swift; sourceTree = "<group>"; };
-		263422AA28022A8700FB6D9D /* NetworkDataFetcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkDataFetcher.swift; sourceTree = "<group>"; };
 		263422AC2802438B00FB6D9D /* CurrencyCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -87,7 +85,6 @@
 			isa = PBXGroup;
 			children = (
 				263422862800612600FB6D9D /* NetworkService.swift */,
-				263422AA28022A8700FB6D9D /* NetworkDataFetcher.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -206,7 +203,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				263422AB28022A8700FB6D9D /* NetworkDataFetcher.swift in Sources */,
 				263422892800617800FB6D9D /* Currency.swift in Sources */,
 				263422752800413300FB6D9D /* CurrencyListViewController.swift in Sources */,
 				263422872800612600FB6D9D /* NetworkService.swift in Sources */,

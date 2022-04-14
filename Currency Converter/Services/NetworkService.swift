@@ -6,26 +6,35 @@
 //
 
 import Foundation
+
+
 class NetworkService {
-    func requestData(from url: String, completionHandler: @escaping (Data?, Error?) -> ()) {
-        
+    
+    static let shared = NetworkService()
+    
+    private init() {}
+    
+    func requestData(from url: String, completionHandler: @escaping(Currency) -> Void) {
         guard let url = URL(string: url) else { return }
         
         URLSession.shared.dataTask(with: url) { data, _, error in
-            DispatchQueue.main.async {
-                guard let data = data else {
-                    print(error?.localizedDescription ?? "No error description")
-                    return
-                }
-                completionHandler(data, nil)
-            }
             
+            guard let data = data else {
+                print(error?.localizedDescription ?? "Нет описания ошибки")
+                return
+            }
+            do {
+                let currency = try JSONDecoder().decode(Currency.self, from: data)
+                DispatchQueue.main.async {
+                    completionHandler(currency)
+                }
+            } catch let error {
+                print("Ошибка извлечения данных:", error)
+                return
+            }
         }.resume()
     }
-    
 }
-
-
 
 
 

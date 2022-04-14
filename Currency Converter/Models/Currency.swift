@@ -7,7 +7,15 @@
 
 struct Currency: Decodable {
     let Valute: [String: Valute]
-    
+
+
+    func getValute() -> [Valute] {
+        var valute: [Valute] = []
+        for value in self.Valute.values {
+            valute.append(value)
+        }
+       return valute
+    }
 }
 
 struct Valute: Decodable {
@@ -16,5 +24,6 @@ struct Valute: Decodable {
     let Nominal: Int
     let Name: String
     let CharCode: String
-    
+
 }
+
